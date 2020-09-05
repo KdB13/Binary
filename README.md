@@ -11,3 +11,5 @@ Binary is a small Android app which can convert number systems.
 ## License
 
 Copyright &copy; Kahan D. Bhalani 2020
+
+This project is licensed under the [MIT](https://github.com/KdB13/Binary/blob/master/LICENSE) license.

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Binary</string>
+
+    <string name="binary">Binary</string>
+    <string name="octal">Octal</string>
+    <string name="decimal">Decimal</string>
+    <string name="hex">Hexadecimal</string>
+
+    <!-- Default number systems -->
+    <string name="default_number_system_1">@string/binary</string>
+    <string name="default_number_system_2">@string/decimal</string>
+
+    <!-- The error to be shown if an invalid number is entered -->
+    <string name="error_invalid_number">Please enter a valid number!</string>
+
+    <!-- Number systems for dropdown -->
+    <string-array name="number_systems">
+        <item>@string/binary</item>
+        <item>@string/octal</item>
+        <item>@string/decimal</item>
+        <item>@string/hex</item>
+    </string-array>
+
+</resources>

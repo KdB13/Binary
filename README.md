@@ -15,6 +15,21 @@ Binary is a small Android app which can convert number systems.
 ![Binary input](./screenshots/binary.jpg)
 ![Hexadecimal input with alphabetic keyboard](./screenshots/hex.jpg)
 
+## Contributing
+
+Thank you so much 😂 for showing your interest in this project. Currently, it is in early development stages and with your help together we can make it to `1.0`.
+
+If you find anything that needs to be changed or a just a simple improvement, just open an **issue** and I will look upon it as early as possible. Together, we will sort it out and, if you are eager to implement it on your own just follow the [Pull requests](#pull-requests) section.
+
+### Pull requests
+
+Your generous contributions are always welcome. Follow these simple steps to get started:
+1. Open an **issue** regarding your change, if one doesn't exist.
+2. Fork this repo.
+3. Create a `feature` branch and commit your changes to that branch.
+4. Push that feature branch and open a **pull request**.
+5. Wait for review & enjoy. 👍
+
 ## License
 
 Copyright &copy; Kahan D. Bhalani 2020

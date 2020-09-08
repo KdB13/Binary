@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:afterTextChanged="@{(s) -> viewModel.onNumberSystem1Changed(s.toString())}"
                 android:inputType="none"
+                app:hideKeyboardOnFocus="@{true}"
                 app:textNoFilter="@{viewModel.number1.numberSystem}"
                 tools:text="@string/default_number_system_1" />
 
@@ -48,12 +49,13 @@
             app:layout_constraintStart_toEndOf="@+id/text_input_number_system_1"
             app:layout_constraintTop_toTopOf="parent">
 
-            <AutoCompleteTextView
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/dropdown_number_system_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:afterTextChanged="@{(s) -> viewModel.onNumberSystem2Changed(s.toString())}"
                 android:inputType="none"
+                app:hideKeyboardOnFocus="@{true}"
                 app:textNoFilter="@{viewModel.number2.numberSystem}"
                 tools:text="@string/default_number_system_2" />
 

@@ -1,5 +1,7 @@
 package com.kdb.binary.util;
 
+import android.content.Context;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
@@ -47,4 +49,35 @@ public class BindingAdapters {
         editText.setHorizontallyScrolling(!wordWrap);
     }
 
+    /**
+     * <p>This binding adapter is specifically for Material's exposed dropdown menu which has a bug —
+     * setting {@code inputType=none} in XML has no effect and it doesn't hide the keyboard if we focus it
+     * after the keyboard is shown by another editable {@link EditText}.</p>
+     * <p>
+     * <br/>
+     *
+     * <p>This adapter will add a {@link android.view.View.OnFocusChangeListener} to the passed
+     * {@link AutoCompleteTextView}, which will hide the keyboard when in focus.</p>
+     *
+     * @param hide A boolean indicating whether to hide the keyboard on focus or not
+     */
+    @BindingAdapter("app:hideKeyboardOnFocus")
+    public static void setHideKeyboardOnFocus(AutoCompleteTextView textView, boolean hide) {
+        if (hide) {
+
+            textView.setOnFocusChangeListener((v, hasFocus) -> {
+
+                if (hasFocus) {
+                    final InputMethodManager inputMethodManager =
+                            (InputMethodManager) textView.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                    inputMethodManager.hideSoftInputFromWindow(textView.getWindowToken(),
+                            InputMethodManager.HIDE_NOT_ALWAYS);
+                }
+
+            });
+
+
+        }
+    }
 }

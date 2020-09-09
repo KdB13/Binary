@@ -13,23 +13,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/padding_regular"
-        tools:context=".HomeFragment">
+        android:padding="@dimen/padding_regular">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_number_system_1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/text_input_number_system_2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <AutoCompleteTextView
                 android:id="@+id/dropdown_number_system_1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:afterTextChanged="@{(s) -> viewModel.onNumberSystem1Changed(s.toString())}"
                 android:inputType="none"
@@ -42,14 +38,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_number_system_2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/text_input_number_system_1"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginTop="@dimen/dropdown_number_system_2_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_num_1">
 
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            <AutoCompleteTextView
                 android:id="@+id/dropdown_number_system_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,26 +58,21 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_num_1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            style="@style/Widget.App.TextInputLayout.Number"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_regular"
-            android:hint="@{viewModel.number1.numberSystem}"
-            app:endIconMode="clear_text"
+            android:layout_marginTop="@dimen/text_input_number_padding_top"
             app:error="@{viewModel.number1.error}"
-            app:errorEnabled="true"
-            app:errorIconDrawable="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_input_number_system_2"
-            tools:hint="@string/default_number_system_1">
+            app:layout_constraintTop_toBottomOf="@+id/text_input_number_system_1">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_num_1"
+                style="@style/Widget.App.TextInputEditText.Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textNoSuggestions"
-                android:nextFocusUp="@id/edit_text_num_2"
+                android:nextFocusDown="@id/edit_text_num_2"
                 android:text="@{viewModel.number1.value}"
                 app:onFocusedTextChanged="@{viewModel::onNumber1Changed}"
                 app:wordWrap="@{true}" />
@@ -91,23 +81,20 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_num_2"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            style="@style/Widget.App.TextInputLayout.Number"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@{viewModel.number2.numberSystem}"
-            app:endIconMode="clear_text"
+            android:layout_marginTop="@dimen/text_input_number_padding_top"
             app:error="@{viewModel.number2.error}"
-            app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_input_num_1"
-            tools:hint="@string/default_number_system_2">
+            app:layout_constraintTop_toBottomOf="@+id/text_input_number_system_2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_num_2"
+                style="@style/Widget.App.TextInputEditText.Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textNoSuggestions"
                 android:nextFocusDown="@id/edit_text_num_1"
                 android:text="@{viewModel.number2.value}"
                 app:onFocusedTextChanged="@{viewModel::onNumber2Changed}"
@@ -118,4 +105,3 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
-

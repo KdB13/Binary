@@ -13,6 +13,8 @@
     <!-- The error to be shown if an invalid number is entered -->
     <string name="error_invalid_number">Please enter a valid number!</string>
 
+    <string name="zero">0</string>
+
     <!-- Number systems for dropdown -->
     <string-array name="number_systems">
         <item>@string/binary</item>

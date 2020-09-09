@@ -9,4 +9,25 @@
         <item name="android:statusBarColor">?colorPrimaryVariant</item>
     </style>
 
+    <style name="Widget.App.TextInputLayout.Number" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.TextInputLayout.Number" parent="">
+        <item name="editTextStyle">@style/Widget.App.TextInputEditText.Number</item>
+    </style>
+
+    <style name="Widget.App.TextInputEditText.Number" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:hint">@string/zero</item>
+        <item name="android:inputType">textNoSuggestions</item>
+
+        <!-- These paddings are a workaround to the extra space which is visible after disabling the hint in TextInputLayout -->
+        <item name="android:paddingTop">@dimen/padding_regular</item>
+        <item name="android:paddingBottom">@dimen/padding_regular</item>
+    </style>
+
 </resources>

@@ -101,4 +101,8 @@ public class HomeViewModel extends AndroidViewModel {
         targetNumber.value.set(converted);
     }
 
+    public void clearBothNumbers() {
+        number1.value.set(null);
+        number2.value.set(null);
+    }
 }

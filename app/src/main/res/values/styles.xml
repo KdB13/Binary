@@ -7,6 +7,10 @@
         <item name="colorSecondary">@color/teal_300</item>
 
         <item name="android:statusBarColor">?colorPrimaryVariant</item>
+
+        <item name="textAppearanceHeadline6">@style/TextAppearance.App.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
     </style>
 
     <style name="Widget.App.TextInputLayout.Number" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
@@ -29,5 +33,4 @@
         <item name="android:paddingTop">@dimen/padding_regular</item>
         <item name="android:paddingBottom">@dimen/padding_regular</item>
     </style>
-
 </resources>

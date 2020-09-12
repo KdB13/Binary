@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.App.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/roboto_mono_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/roboto_mono_regular</item>
+    </style>
+
+    <style name="TextAppearance.App.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/roboto_mono_regular</item>
+    </style>
+</resources>

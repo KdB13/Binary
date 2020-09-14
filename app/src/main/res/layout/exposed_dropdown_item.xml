@@ -2,9 +2,11 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="32dp"
     android:ellipsize="end"
+    android:gravity="center_vertical"
     android:maxLines="1"
-    android:padding="@dimen/padding_regular"
+    android:paddingStart="12dp"
+    android:paddingEnd="8dp"
     android:textAppearance="?textAppearanceSubtitle1"
     tools:text="Sample Item" />

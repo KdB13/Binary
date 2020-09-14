@@ -19,7 +19,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_number_system_1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            style="@style/Widget.App.TextInputLayout.NumberSystem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_input_number_system_2"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            style="@style/Widget.App.TextInputLayout.NumberSystem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dropdown_number_system_2_margin_top"
@@ -72,7 +72,6 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_num_1"
-                style="@style/Widget.App.TextInputEditText.Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nextFocusDown="@id/edit_text_num_2"
@@ -96,7 +95,6 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_num_2"
-                style="@style/Widget.App.TextInputEditText.Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nextFocusDown="@id/edit_text_num_1"

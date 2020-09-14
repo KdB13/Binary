@@ -1,16 +1,17 @@
 <resources>
-    <style name="Widget.App.TextInputLayout.Number" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+    <!-- Styles for NUMBER TEXT FIELD -->
+    <!-- [TextInputLayout] Text field for number -->
+    <style name="Widget.App.TextInputLayout.Number" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintEnabled">false</item>
         <item name="boxCollapsedPaddingTop">0dp</item>
         <item name="errorEnabled">true</item>
         <item name="errorIconDrawable">@null</item>
         <item name="endIconMode">clear_text</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.AppCompat.TextInputLayout.Number
+        </item>
     </style>
 
-    <style name="ThemeOverlay.AppCompat.TextInputLayout.Number" parent="">
-        <item name="editTextStyle">@style/Widget.App.TextInputEditText.Number</item>
-    </style>
-
+    <!-- [TextInputEditText] Used inside number text field -->
     <style name="Widget.App.TextInputEditText.Number" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:hint">@string/zero</item>
         <item name="android:inputType">textNoSuggestions</item>
@@ -19,4 +20,35 @@
         <item name="android:paddingTop">@dimen/padding_regular</item>
         <item name="android:paddingBottom">@dimen/padding_regular</item>
     </style>
+
+    <!-- [ThemeOverlay] Used for applying material theme overlay in number tex field -->
+    <style name="ThemeOverlay.AppCompat.TextInputLayout.Number" parent="">
+        <item name="editTextStyle">@style/Widget.App.TextInputEditText.Number</item>
+    </style>
+
+    <!-- Styles for NUMBER SYSTEM DROPDOWN MENU -->
+    <!-- [TextInputLayout] Dropdown menu for selecting number system -->
+    <style name="Widget.App.TextInputLayout.NumberSystem" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+        <item name="hintEnabled">false</item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.App.TextInputLayout.ExposedDropDownMenu.NumberSystem
+        </item>
+    </style>
+
+    <!-- [AutoCompletetTextView] Used inside number system dropdown -->
+    <style name="Widget.App.AutoCompleteTextView.NumberSystem" parent="Widget.MaterialComponents.AutoCompleteTextView.FilledBox.Dense">
+        <item name="android:inputType">none</item>
+
+        <!-- These paddings are a workaround to the extra space which is visible after disabling the hint in TextInputLayout -->
+        <item name="android:paddingTop">@dimen/dropdown_number_system_padding</item>
+        <item name="android:paddingBottom">@dimen/dropdown_number_system_padding</item>
+    </style>
+
+    <!-- [ThemeOverlay] Used for applying material theme overlay in number system dropdown -->
+    <style name="ThemeOverlay.App.TextInputLayout.ExposedDropDownMenu.NumberSystem" parent="">
+        <item name="autoCompleteTextViewStyle">@style/Widget.App.AutoCompleteTextView.NumberSystem
+        </item>
+    </style>
+
 </resources>

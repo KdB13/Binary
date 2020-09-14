@@ -3,4 +3,5 @@
     <dimen name="padding_regular">16dp</dimen>
     <dimen name="text_input_number_padding_top">8dp</dimen>
     <dimen name="dropdown_number_system_2_margin_top">@dimen/padding_regular</dimen>
+    <dimen name="dropdown_number_system_padding">8dp</dimen>
 </resources>

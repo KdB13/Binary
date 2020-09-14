@@ -67,6 +67,11 @@ public class HomeViewModel extends AndroidViewModel {
         }
     }
 
+    public void clearBothNumbers() {
+        number1.value.set(null);
+        number2.value.set(null);
+    }
+
     private void convertNum1() {
         convert(number1, number2);
     }
@@ -84,8 +89,8 @@ public class HomeViewModel extends AndroidViewModel {
         }
 
         // Get the number system bases
-        int srcBase = numberSystems.get(srcNumber.numberSystem.get());
-        int targetBase = numberSystems.get(targetNumber.numberSystem.get());
+        int srcBase = getBase(srcNumber.numberSystem.get());
+        int targetBase = getBase(targetNumber.numberSystem.get());
 
         // Perform conversion
         String converted = Converter.convert(srcNumber.value.get(), srcBase, targetBase);
@@ -101,8 +106,12 @@ public class HomeViewModel extends AndroidViewModel {
         targetNumber.value.set(converted);
     }
 
-    public void clearBothNumbers() {
-        number1.value.set(null);
-        number2.value.set(null);
+    /**
+     * A ultility method which returns corresponding base of a number system from {@link #numberSystems}
+     * HashMap.
+     * @return The corresponding base in integer
+     */
+    private int getBase(final String numberSystem) {
+        return numberSystems.get(numberSystem);
     }
 }

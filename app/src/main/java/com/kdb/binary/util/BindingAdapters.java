@@ -34,12 +34,18 @@ public class BindingAdapters {
     }
 
     /**
-     * Turns on soft word-wrap for EditText with maximum lines of {@link Byte#MAX_VALUE}.
+     * Sets the input type and toggles soft word-wrap for EditText with
+     * maximum lines of {@link Byte#MAX_VALUE}.
      *
-     * @param wordWrap A boolean indicating whether to word-wrap or not
+     * @param inputType The input type of this EditText
+     * @param wordWrap  A boolean indicating whether to word-wrap or not
      */
-    @BindingAdapter("app:wordWrap")
-    public static void setWordWrap(EditText editText, boolean wordWrap) {
+    @BindingAdapter({"android:inputType", "app:wordWrap"})
+    public static void setInputTypeAndWordWrap(EditText editText, int inputType, boolean wordWrap) {
+        // Set the input type first
+        editText.setInputType(inputType);
+
+        // Then set the word wrapping
         if (wordWrap) {
             editText.setMaxLines(Byte.MAX_VALUE);
         } else {

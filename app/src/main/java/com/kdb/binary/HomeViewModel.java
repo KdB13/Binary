@@ -22,9 +22,9 @@ public class HomeViewModel extends AndroidViewModel {
         // Get the number systems HashMap from repository
         numberSystems = NumberSystemsRepository.getInstance(getApplication()).getNumberSystems();
 
-        // Initialize the NumberModel objects with default number systems
-        number1 = new NumberTextField(getApplication().getString(R.string.binary));
-        number2 = new NumberTextField(getApplication().getString(R.string.decimal));
+        // Initialize the NumberModel objects with default number systems and input types
+        number1 = new NumberTextField(getApplication().getString(R.string.binary), NumberTextField.INPUT_TYPE_NUMBER);
+        number2 = new NumberTextField(getApplication().getString(R.string.decimal), NumberTextField.INPUT_TYPE_NUMBER);
     }
 
     public void onNumber1Changed(final String newNumber) {

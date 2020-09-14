@@ -14,7 +14,6 @@
     <!-- [TextInputEditText] Used inside number text field -->
     <style name="Widget.App.TextInputEditText.Number" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
         <item name="android:hint">@string/zero</item>
-        <item name="android:inputType">textNoSuggestions</item>
 
         <!-- These paddings are a workaround to the extra space which is visible after disabling the hint in TextInputLayout -->
         <item name="android:paddingTop">@dimen/padding_regular</item>

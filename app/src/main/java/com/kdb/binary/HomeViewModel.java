@@ -52,6 +52,9 @@ public class HomeViewModel extends AndroidViewModel {
         if (!newNumberSystem.equals(number1.numberSystem.get())) {
             number1.numberSystem.set(newNumberSystem);
 
+            // Change the input type
+            number1.setInputType(getBase(newNumberSystem));
+
             // Convert number 2 to new number system
             convertNum2();
         }
@@ -61,6 +64,9 @@ public class HomeViewModel extends AndroidViewModel {
 
         if (!newNumberSystem.equals(number2.numberSystem.get())) {
             number2.numberSystem.set(newNumberSystem);
+
+            // Change the input type
+            number2.setInputType(getBase(newNumberSystem));
 
             // Convert number 1 to new number system
             convertNum1();

@@ -43,9 +43,12 @@ public class NumberTextField {
      */
     public static final int INPUT_TYPE_TEXT = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
 
-    public NumberTextField(final String numberSystem, final int inputType) {
+    public NumberTextField(final String numberSystem, final int base) {
         this.numberSystem = new ObservableField<>(numberSystem);
-        this.inputType = new ObservableInt(inputType);
+
+        // Set the input type based on number system base
+        this.inputType = new ObservableInt();
+        setInputType(base);
     }
 
     /**

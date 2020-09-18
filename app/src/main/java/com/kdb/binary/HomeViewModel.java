@@ -24,7 +24,7 @@ public class HomeViewModel extends AndroidViewModel {
         // Get the number systems HashMap from repository
         numberSystems = NumberSystemsRepository.getInstance(getApplication()).getNumberSystems();
 
-        // Initialize the NumberTextFields objects with default number systems and input types
+        // Initialize the NumberTextFields objects with default number systems
         initNumberTextFields();
     }
 
@@ -109,8 +109,8 @@ public class HomeViewModel extends AndroidViewModel {
                 getApplication().getString(R.string.number_system_2_key),
                 getApplication().getString(R.string.default_number_system_2));
 
-        number1 = new NumberTextField(numberSystem1, NumberTextField.INPUT_TYPE_NUMBER);
-        number2 = new NumberTextField(numberSystem2, NumberTextField.INPUT_TYPE_NUMBER);
+        number1 = new NumberTextField(numberSystem1, getBase(numberSystem1));
+        number2 = new NumberTextField(numberSystem2, getBase(numberSystem2));
     }
 
     private void convertNum1() {

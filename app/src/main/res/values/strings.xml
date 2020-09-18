@@ -10,6 +10,13 @@
     <string name="default_number_system_1">@string/binary</string>
     <string name="default_number_system_2">@string/decimal</string>
 
+    <!-- SharedPreferences keys for number system selection -->
+    <string name="number_system_1_key" translatable="false">number_system_1</string>
+    <string name="number_system_2_key" translatable="false">number_system_2</string>
+
+    <!-- SharedPreferences file key -->
+    <string name="preference_file_key">com.kdb.binary.SHARED_PREFERENCES</string>
+
     <!-- The error to be shown if an invalid number is entered -->
     <string name="error_invalid_number">Please enter a valid number!</string>
 

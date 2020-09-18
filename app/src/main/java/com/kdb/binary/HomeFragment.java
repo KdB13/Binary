@@ -50,4 +50,11 @@ public class HomeFragment extends Fragment {
         binding.dropdownNumberSystem2.setAdapter(arrayAdapter);
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // Save the current number systems selection to SharedPreferences
+        viewModel.saveNumberSystemsSelection();
+    }
 }
